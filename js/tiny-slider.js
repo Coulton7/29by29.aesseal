@@ -19,15 +19,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 },
         
                 768: {
-                    items: 3
+                    items: 2
                 },
         
                 992: {
-                    itmes: 4
+                    itmes: 3
                 },
         
                 1200: {
-                    items: 4
+                    items: 3
                 }
             },
         })
