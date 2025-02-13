@@ -10,25 +10,24 @@
   <meta property="og:title" content="Investment Pledge">
   <meta property="og:descrpition" content="Our ‘£29 million by 2029’ pledge recognises that businesses will have a potentially huge influence on the success of efforts to limit global warming.">
   <meta property="og:image" content="https://www.aesseal.com/sites/aesseal.com/files/icon/AESSEAL-og-image.jpg">
-  <script src="https://code.jquery.com/jquery-1.12.0.min.js" integrity="sha256-Xxq2X+KtazgaGuA2cWR1v3jJsuMJUozyIXDB3e793L8=" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js" integrity="sha256-HmfY28yh9v2U4HfIXC+0D6HCdWyZI42qjaiCFEJgpo0=" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js" integrity="sha512-j+F4W//4Pu39at5I8HC8q2l1BNz4OF3ju39HyWeqKQagW6ww3ZF9gFcu8rzUbyTDY7gEo/vqqzGte0UPpo65QQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link ref="shortcut icon" type="image/x-icon" href="favicon.ico?">
   <link rel="canonical" href="https://29by29.aesseal.com/" />
-  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/brands.css" integrity="sha384-rf1bqOAj3+pw6NqYrtaE1/4Se2NBwkIfeYbsFdtiR6TQz0acWiwJbv1IM/Nt/ite" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css" integrity="sha512-eMxdaSf5XW3ZW1wZCrWItO2jZ7A9FhuZfjVdztr7ZsKNOmt6TUMTQgfpNoVRyfPE5S9BC0A4suXzsGSrAOWcoQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" type="text/css" href="css/site-style.css">
   <script type="text/javascript" src="js/init-bs.js"></script>
   <script type="text/javascript" src="js/logoscroll.js"></script>
-  <script type="text/javascript" src="js/contact-icon.js"></script>
-  <script type="text/javascript" src="js/fade-text.js"></script>
-  <script type="text/javascript" src="js/carousel-options.js"></script>
-  <script type="text/javascript" src="js/nav-btn.js"></script>
+  <script type="text/javascript" src="js/nav-scroll.js"></script>
+  <script type="text/javascript" src="js/overlay-trigger.js"></script>
+  <script type="text/javascript" src="js/tiny-slider.js"></script>
   <script type="text/javascript" src="js/smooth-scroll.js"></script>
-  <script type="text/javascript" src="js/block-reveal.js"></script>
+  
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -39,10 +38,10 @@
   <!-- End Google Tag Manager -->
 </head>
 
-<div class="container-fluid bannercontainer">
-  <div class="row bannerimage">
-    <div class="row waveupper row-eq-height">
-      <div class="col-sm-2 col-xs-1 fullscreen">
+<div class="dialog-off-canvas-main-canvas">
+  <div class="row g-0 bannerimage">
+    <div class="row g-0 waveupper">
+      <div class="col-md-2 col-xs-1 col-1">
         <a title="Home" class="logo-link" href="https://www.aesseal.com/en">
           <div class="wavelogo">
             <img class="wavelogo" src="images/AES-logo21.svg" alt="logo">
@@ -55,31 +54,26 @@
       </div>
 
 
-      <div class="col-sm-10 col-xs-11 fullscreen">
-        <header id="navbar" role="banner" class="navbar navbar-fixed-top navbar-default">
+      <div class="col-md-10 col-xs-11 col-11">
+        <nav id="autocollapse" class="bg-white navbar-expand-lg navbar fixed-top">
           <div class="container-fluid">
-            <div class="navbar-header">
-              <a href="https://www.aesseal.com" rel="nofollow"><button class="navbar-toggle">
-                  <i class="fas fa-home fa-lg"></i>
-                </button></a>
-            </div>
-          </div>
-          <div class="navbar-collapse collapse">
-            <div class="container-fluid navbar-container">
+            <div class="collapse navbar-collapse" id="mobile-overlay">
               <nav role="navigation">
-                <ul class="menu nav navbar-nav">
-                  <li><a rel="nofollow" href="https://www.aesseal.com/en/industry">Industry</a></li>
-                  <li><a rel="nofollow" href="https://www.aesseal.com/en/product">Product</a></li>
-                  <li><a rel="nofollow" href="https://www.aesseal.com/en/services">Services</a></li>
-                  <li><a rel="nofollow" href="https://www.aesseal.com/en/about-us">About Us</a></li>
-                  <li><a rel="nofollow" href="https://www.aesseal.com/en/resources">Brochures & Downloads</a></li>
+                <ul class="menu menu--main navbar-nav">
+                  <li class="nav-item"><a rel="nofollow" href="https://www.aesseal.com/en/about-us">About Us</a></li>
+                  <li class="nav-item"><a rel="nofollow" href="https://www.aesseal.com/en/product">Products</a></li>
+                  <li class="nav-item"><a rel="nofollow" href="https://www.aesseal.com/en/services">Services</a></li>
+                  <li class="nav-item"><a rel="nofollow" href="https://www.aesseal.com/en/industry">Industry</a></li>
+                  <li class="nav-item"><a rel="nofollow" href="https://www.aesseal.com/en/locations/">Locations</a></li>
+                  <li class="nav-item"><a rel="nofollow" href="https://www.aesseal.com/en/resources">ESG & Resources</a></li>
+                  <li class="nav-item"><a rel="nofollow" href="https://www.aesseal.com/en/article/">News</a></li>
                 </ul>
-                <a class="hidden-xs overlay-btn" id="overlay-btn">
-                  <i class="fas fa-bars" aria-hidden="true"></i><div class="inline hidden-sm hidden-xs">  Menu</div>
+                <a class="d-none overlay-btn" id="overlay-btn">
+                  <i class="fas fa-bars" aria-hidden="true"></i><div class="d-inline d-md-inline d-none">  Menu</div>
                 </a>
                 <div id="myNav" class="overlay-main">
                   <div class="overlay-content">
-                    <div class="col-md-4 col-md-offset-1 col-sm-6 col-sm-offset-1">
+                    <div class="col-lg-4 offet-lg-1 col-xl-6 offet-xl-1">
                       <ul class="product-cats list-unstyled"><li><a class="no-dash" href="https://www.aesseal.com/en/product/bearing-protection">Bearing Protection</a></li>
                         <li><a class="no-dash" rel="nofollow" href="https://www.aesseal.com/en/product/cartridge-mechanical-seals">Cartridge Mechanical Seals</a></li>
                         <li><a class="no-dash" rel="nofollow" href="https://www.aesseal.com/en/product/component-seals">Component Seals</a></li>
@@ -89,7 +83,7 @@
                         <li><a class="no-dash" rel="nofollow" href="https://www.aesseal.com/en/services/seal-refurbishment">Seal Refurbishment</a></li>
                       </ul>
                     </div>
-                    <div class="col-md-3 hidden-sm hidden-xs">
+                    <div class="col-lg-3 d-md-inline d-none">
                       <ul class="about-us-cats list-unstyled"><li><a class="no-dash" href="https://www.aesseal.com/en/about-us/careers/">Careers</a></li>
                         <li><a class="no-dash" rel="nofollow" href="https://www.aesseal.com/en/about-us/certifications-and-standards">Certifications and Standards</a></li>
                         <li><a class="no-dash" rel="nofollow" href="https://www.aesseal.com/contact-us">Contact Us</a></li>
@@ -100,7 +94,7 @@
                         <li><a class="no-dash" rel="nofollow" href="https://www.aesseal.com/en/about-us/sustainability">Sustainability</a></li>
                       </ul>
                     </div>
-                    <div class="col-md-3 col-sm-4">
+                    <div class="col-lg-3 col-xl-4">
                       <ul class="resource-cats list-unstyled">
                         <li><a class="no-dash" rel="nofollow" href="https://www.aesseal.com/en/resources/academy">Academy</a></li>
                         <li><a class="no-dash" rel="nofollow" href="https://www.aesseal.com/en/resources/api-plans">API Plans</a></li>
@@ -124,68 +118,70 @@
           <div class="progress-container">
             <div class="progress-bar" id="myBar"></div>
           </div>
-        </header>
+        </nav>
       </div>
     </div>
 
-    <div class="navigation_col">
-      <div class="action-menu text-center">
-        <div class="col-md-2 col-sm-1 col-xs-0 fullscreen">
+    <div class="row g-0">
+      <div class="scroll-nav">
+        <div>
+          <div id="block-navplaceholder" class="contextual-region">    
+            <div>
+              <div class="field--items">
+                <div class="field--item">
+                  <div class="link-light my-3">
+                    <a class="link-light no-underline d-none d-lg-inline-block" rel="no-follow" data-bs-title="Back to Home" data-bs-toggle="tooltip" data-bs-placement="top" href="/" data-bs-original-title="" title=""><i class="fas fa-home ms-4"></i> Home </a>
+                    <a id="overlay-search" class="link-light ms-4 no-underline search-btn" data-bs-title="Search the Site" data-bs-toggle="tooltip" data-bs-placement="top" rel="no-follow" data-bs-original-title="" title=""><i class="fas fa-search"></i> Search </a>
+                    <a class="link-light ms-4 no-underline" data-bs-toggle="offcanvas" href="#primary" role="button" aria-controls="offcanvasprimary"><i class="fas fa-language me-1"></i> Language</a>
+                    <a id="overlay-share" class="link-light ms-4 ms-sm-5 ms-lg-4 shadow-mob-text no-underline share-btn" data-bs-title="Share this page" data-bs-toggle="tooltip" data-bs-placement="top" rel="no-follow" data-bs-original-title="" title=""><i class="fas fa-share-alt"></i> Share</a>
+                    <a class="link-light ms-4 no-underline" rel="no-follow" data-bs-title="Contact your local representative" data-bs-toggle="tooltip" data-bs-placement="top" href="/en/contact-us" data-bs-original-title="" title=""><i class="fas fa-question-circle"></i> Contact Us </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-md-10 col-md-offset-2 col-sm-11 col-sm-offset-1 col-xs-12 no-padding">
-          <div class="region region-navigation-col fit-menu">
-            <section id="block-views-exp-search-page-1" class="views-search-block search-block hidden-xs clearfix">
-              <form action="https://www.aesseal.com/en/search" rel="nofollow" method="get" id="views-exposed-form-search-page-1" accept-charset="UTF-8">
+      </div>
+    </div>
+
+    <div class="row g-0">
+      <div class="preface preface-flex-margin text-bg-primary">
+        <div class="row pt-10 pb-lg-0 pb-8 about us-banner-background">
+          <div class="col-xl-7 col-lg-7 col-md-6 offset-xl-2 offset-lg-2 offset-md-1 col-11 offset-1">
+            <div>
+              <div id="block-aesbase-breadcrumbs" class="contextual-region block block-system block-system-breadcrumb-block">
+                <nav aria-label="You are here:">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                      <a href="/en/">Home</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">About Us
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+              <div class="page-title">
+                <h1><span>About Us</span></h1>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-6 col-12 d-block position-relative">
+            <div>
+              <div id="block-aesbase-articlesnewwavepromo" class="contextual-region">
                 <div>
-                  <div class="views-exposed-form">
-                    <div class="views-exposed-widgets clearfix">
-                      <div id="edit-qs--2-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext_1">
-                        <div class="views-widget">
-                          <div class="form-item form-item-qs form-type-textfield form-group"><input placeholder="Enter your keywords" class="form-control form-text" type="text" id="edit-qs--2" name="qs" value="" size="30" maxlength="128">
-                          </div>
+                  <div class="field--items">
+                    <div class="field--item">
+                      <div class="row promo-block ">
+                        <div class="promo-image g-0 position-relative">
+                          <img class="float-end me-3" src="https://static.aesseal.com/photo/wavehead/wave-promo-29by29.png">
                         </div>
-                      </div>
-                      <div class="views-exposed-widget views-submit-button">
-                        <button type="submit" id="edit-submit-search" name="" value="Search" class="btn btn-primary form-submit">Search</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </section>
-
-            <section id="block-block-138" class="block block-block cust-portal hidden-sm hidden-xs clearfix">
-              <a href="https://www.aesseal.com/en/customer-portal" rel="nofollow"><span class="hidden-md">Customer</span> Portal <i class="fas fa-sign-in-alt cust-portal-text" aria-hidden="true"></i></a>
-            </section>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="preface front__flex-margin">
-      <div class="flex-gradient">
-        <div class="row">
-          <div class="col-lg-7 col-lg-offset-2 col-md-8 col-md-offset-1 col-sm-9">
-            <div class="flex-header">
-              <h1 class="page-header text-shadow" id="page-main-heading">£29 million by 2029 investment pledge</h1>
-            </div>
-          </div>
-          <div class="col-lg-7 col-lg-offset-2 col-md-7 col-md-offset-1 col-sm-8">
-            <div class="flex-caption">
-              <div class="breadcrumb-wrap">
-                <div class="container-fluid">
-                  <div class="row">
-                    <ol class="breadcrumb">
-                      <li><a href="https://www.aesseal.com/en" rel="nofollow">Home</a></li>
-                      <li><a href="https://www.aesseal.com/en/about-us" rel="nofollow">About Us</a></li>
-                      <li><a href="https://www.aesseal.com/en/about-us/sustainability" rel="nofollow">Sustainability</a></li>
-                    </ol>
-                    <div class="breadcrumb-sitemap">
-                      <li>
-                        <a href="https://www.aesseal.com/en/sitemap" rel="nofollow">
-                          <i class="fas fa-sitemap" aria-hidden="true"></i>
+                        <a class="text-decoration-none" href="https://aesdigitalbooks.s3.eu-west-1.amazonaws.com/29by29-03/index.html">
+                          <div class="btn promo-btn-success  btn-white border-2 border-white rounded-pill ms-6 text-white ">29by29 Investment Summary</div>  
                         </a>
-                      </li>
+                      </div>
+                      <div class="promo-text">
+                        <p class="text-center promo-text text-nowrap text-primary me-8">Learn about our environmental investment pledge</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -194,370 +190,325 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
 
-
-      <div class="row wavelower row-eq-height">
-        <div class="col-md-9 col-sm-8 col-xs-0 fullscreen">
-          <div class="bottom-gap">
-          </div>
+  <main role="main" class="container-fluid">
+    <div class="conatiner-fluid">
+      <div class="row">
+        <div class="col-lg-10 offet-lg-1 col-xl-8 offset-xl-2">
+          <p class="lead">Our ‘£29 million by 2029’ pledge recognises that businesses will have a potentially huge influence on the success of efforts to limit global warming.</p>
+          <p>By committing to take the global company beyond Net Zero globally (we have already gone beyond Net Zero in the UK business) and explaining how we are going to do it, we believe we will provide a road map for other companies and organisations who share our concern about ethical, balanced and sustainable development.</p>
         </div>
 
-        <div class="col-md-3 col-sm-4 col-xs-12 fullscreen">
-          <img class="curve-down" src="images/wave-lower.svg" alt="curve-down">
-          <div class="socialmedia text-center">
-            <ul>
-              <li> <a href="https://twitter.com/AESSEALplc" rel="nofollow" target="_self" data-toggle="tooltip" data-placement="top" title="AESSEAL Twitter"> <i class="fab fa-twitter "></i></a></li>
-              <li> <a href="http://www.linkedin.com/company/aesseal" target="_self" data-toggle="tooltip" data-placement="top" rel="nofollow" title="AESEEAL Linkedin"> <i class="fab fa-linkedin-in "></i></a></li>
-              <li class="contact_icon"> <a href="https://www.aesseal.com/en/contact-us" target="_self" data-toggle="tooltip" data-placement="top" title="Contact Us"> <i class="fas fa-phone-square "></i></a></li>
-              <li class="contact_icon" style="display: none;"> <a href="https://www.aesseal.com/en/contact-us" target="_self" rel="nofollow" data-toggle="tooltip" data-placement="top" title="Contact Us"> <i class="fas fa-envelope-square"></i></a></li>
-              <li> <a href="https://www.aesseal.com/en/locations" rel="nofollow" target="_self" data-toggle="tooltip" data-placement="top" title="Browse all Locations"> <i class="fas fa-globe-americas"></i></a></li>
-            </ul>
-            <div class="social-id">
-              <p class="fade_text">Find Us</p>
-              <p class="fade_text">Follow Us</p>
-              <p class="fade_text">Contact Us</p>
+        <div class="col-lg-10 col-xl-8 offset-xl-2 offet-lg-1">
+          <h2 class="text-center" id="news">Latest News</h2>
+
+          <ul class="controls" id="arrow-controls" aria-label="Product Carousel Navigation" tabindex="0">
+            <li class="next" data-controls="next" aria-controls="arrows" tabindex="-1">
+                <i class="fas fa-chevron-left "></i>
+            </li>
+            <li class="prev" data-controls="prev" aria-controls="arrows" tabindex="-1">
+                <i class="fas fa-chevron-right"></I></a>
+            </li>
+          </ul>   
+          <div id="resourcesSlider" class="base-slider">
+              
+              <div class="item">
+                <div class="row mx-auto my-auto justify-content-center h-100 p-2">
+                  <div class="card shadow-sm p-0 h-100">
+                    <img class="img-fluid object-fit-cover rounded-top border-bottom w-100 tns-lazy-img" height="200" width="300" data-src="https://static.aesseal.com/content-thumb/news/AESSEAL_Chris_Rea_001-sq.jpg" alt="Chris Rea in Factory for the Future" rel="nofollow">
+                    <div class="card-body d-flex flex-column">
+                      <h4>AES in The Times</h4>
+                      <p>AES Engineering Managing Director Chris Rea writes in The Times about the group’s strategy to invest in its staff and in technology in order to future proof jobs and keep ahead of the competition.</p>
+                    </div>
+                    <div class="card-footer">
+                      <a data-toggle="tooltip" class="btn btn-primary" data-placement="bottom" title="" href="https://www.aesseal.com/en/article/in-the-aes-times/" data-original-title="Read the article on aesseal.com" rel="nofollow">Read the Article</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="row mx-auto my-auto justify-content-center h-100 p-2">
+                  <div class="card shadow-sm p-0 h-100">
+                    <img class="img-fluid object-fit-cover rounded-top border-bottom w-100 tns-lazy-img" height="200" width="300" data-src="https://static.aesseal.com/content-thumb/news/TORISHIMA_ECOGUARD_6073.jpg" alt="EcoGuard Product">
+                    <div class="card-body d-flex flex-column">
+                      <h4>New System Could Eliminate Flaring and Venting from Oil and Gas Fields</h4>
+                      <p>A ground-breaking technology aimed at addressing flaring and venting in oil and gas fields has been launched by UK-based AESSEAL, in partnership with Torishima (Glasgow, UK)</p>
+                    </div>
+                    <div class="card-footer">
+                      <a data-toggle="tooltip" class="btn btn-primary" data-placement="bottom" title="Read the article on aesseal.com" href="https://www.aesseal.com/en/article/new-system-could-eliminate-flaring-and-venting-oil-and-gas-fields/" rel="nofollow">Watch the Video</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="row mx-auto my-auto justify-content-center h-100 p-2">
+                  <div class="card shadow-sm p-0 h-100">
+                    <img class="img-fluid object-fit-cover rounded-top border-bottom w-100 tns-lazy-img" height="200" width="300" data-src="https://static.aesseal.com/content-thumb/news/AU-BREEAM-certification-420.jpg" alt="HVAC Stsyem and workers" rel="nofollow">
+                    <div class="card-body d-flex flex-column">
+                      <h4>AESSEAL first in Australia with BREEAM certification</h4>
+                      <p>AESSEAL Australia has announced that its headquarters building in Brisbane has been certified under the BREEAM sustainability scheme - the first building in Australia to receive such a certification.</p>
+                    </div>
+                    <div class="card-footer">
+                      <a data-toggle="tooltip" class="btn btn-primary" data-placement="bottom" title="" href="https://www.aesseal.com/en/article/first-australia-breeam-certification/" data-original-title="Read the article on aesseal.com" rel="nofollow">Read the Article</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="row mx-auto my-auto justify-content-center h-100 p-2">
+                  <div class="card shadow-sm p-0 h-100">
+                    <img class="img-fluid object-fit-cover rounded-top border-bottom w-100 tns-lazy-img" height="200" width="300" data-src="https://static.aesseal.com/content-thumb/news/Three-years-beyond-Net-Zero-sq.jpg" alt="Sun breaking through trees">
+                    <div class="card-body d-flex flex-column">
+                      <h4>Three years beyond Net Zero
+                      </h4>
+                      <p>AES Engineering Ltd group went beyond Net Zero in 2023 for the third year running with a positive environmental impact over this period equivalent to a forest of 15 million trees</p>
+                    </div>
+                    <div class="card-footer">
+                      <a data-toggle="tooltip" class="btn btn-primary" data-placement="bottom" title="" href="https://www.aesseal.com/en/article/three-years-beyond-net-zero/" rel="nofollow" data-original-title="Read the article on aesseal.com">Read the Article</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="row mx-auto my-auto justify-content-center h-100 p-2">
+                  <div class="card shadow-sm p-0 h-100">
+                    <img class="img-fluid object-fit-cover rounded-top border-bottom w-100 tns-lazy-img" height="200" width="300" data-src="https://static.aesseal.com/content-thumb/news/sypd_2024_sustainable_development-sq.jpg" alt="Queens award flag">
+                    <div class="card-body d-flex flex-column">
+                      <h4>Sustainable Development of the Year</h4>
+                      <p>The AESSEAL Factory for the Future has been voted Sustainable Development of the Year at the South Yorkshire Property Awards.</p>
+                    </div>
+                    <div class="card-footer">
+                      <a data-toggle="tooltip" class="btn btn-primary" data-placement="bottom" title="" href="https://www.aesseal.com/en/article/sustainable-development-year/" rel="nofollow" data-original-title="Read the article on aesseal.com">Read the Article</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="row mx-auto my-auto justify-content-center h-100 p-2">
+                  <div class="card shadow-sm p-0 h-100">
+                    <img class="img-fluid object-fit-cover rounded-top border-bottom w-100 tns-lazy-img" height="200" width="300" data-src="images/Our-video-journey-sq.jpg" alt="Chris Video Diary thumbnail">
+                    <div class="card-body d-flex flex-column">
+                      <h4>Chris Rea Video Diary 11</h4>
+                      <p>In his latest video diary AES Engineering Managing Director Chris Rea reports on progress on the 29by29 pledge, including almost £16 million of purchase orders made to date.</p>
+                    </div>
+                    <div class="card-footer">
+                      <a data-toggle="tab" aria-expanded="true" class="btn btn-primary latest-vid" title="Watch the latest video in the boxset" data-target="#box-set" data-original-title="Watch the latest video in the boxset">Watch the Video</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="row mx-auto my-auto justify-content-center h-100 p-2">
+                  <div class="card shadow-sm p-0 h-100">
+                    <img class="img-fluid object-fit-cover rounded-top border-bottom w-100 tns-lazy-img" height="200" width="300" data-src="https://static.aesseal.com/content-thumb/news/Methane-Flare-2.jpg" alt="Methane flaring on rig" rel="nofollow">
+                    <div class="card-body d-flex flex-column">
+                      <h4>Stopping methane flaring and venting</h4>
+                      <p>AESSEAL, has invented new technology that seeks to eliminate or reduce both intermittent and continuous emissions and could be retrofitted to oil and gas facilities across the world.</p>
+                    </div>
+                    <div class="card-footer">
+                      <a data-toggle="tooltip" class="btn btn-primary" data-placement="bottom" title="" href="https://betterworld.solutions/examples/stop-methane-flaring-yes-we-can" data-original-title="Read the article on betterworld.solutions" rel="nofollow">Read the Article</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="container-fluid text-bg-primay mt-5">
+        <div class="row py-9">
+          <div class="col-lg-10 offet-lg-1 col-xl-8 offset-xl-2">
+            <div class="col-12 col-lg-4 col-lg-3 order-2 image-highlight no-padding">
+              <a href="https://aesdigitalbooks.s3.eu-west-1.amazonaws.com/29by29-03/index.html" target="_blank" title="29by29 Update" rel="nofollow">
+                <img class="img-fluid " loading="lazy" src="https://static.aesseal.com/content-image/brochure/29-digi-cover.jpg" alt="29 by 29 Update brochure cover" />
+              </a>
+            </div>
+            <div class="col-12 col-lg-8 col-lg-9 order-1">
+              <h3>29 by 29 Investment Summary</h3>
+              <p class="text-white">The AES Engineering Ltd. Group has committed to invest £29 million on environmental projects between January 1, 2021 and April 1, 2029. Part of the commitment was an undertaking to report on progress, so we are doing what we said we would.</p>
+              <p><a href="https://aesdigitalbooks.s3.eu-west-1.amazonaws.com/29by29-03/index.html" class="btn-midgrey btn mt-5" rel="nofollow">Open the Brochure</a></p>
             </div>
           </div>
         </div>
+      </div>
 
+      <div class="container-fluid mt-5">
+        <div class="container" id="boxset">
+          <h2>Chris Rea Video Diary Box Set</h3>
+          <p class="lead">The AES Engineering Group has committed to invest £29 million on environmental projects between January 1st 2021 and April 1st 2029. The following videos are part of the commitment to report on the progress.</p>
+          <div class="row">
+            <div class="row row-eq-height flex-wrap">
+
+              <div class="col-lg-4 col-lg-6 col-12 margin-bottom" id="diary-one">
+                <script src="https://fast.wistia.com/embed/medias/rvo9ngid6n.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><span class="wistia_embed wistia_async_rvo9ngid6n popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span></div></div>
+                <p class="text-center"><strong>Video 1</strong> - In this first video find out how industry can help tackle climate change, and how AESSEAL are committing to spend £29,000,000 on environmental projects by 2029.</p>
+              </div>
+
+              <div class="col-lg-4 col-lg-6 col-12 margin-bottom" id="diary-two">
+                <script src="https://fast.wistia.com/embed/medias/3dj8nq6p6h.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><span class="wistia_embed wistia_async_3dj8nq6p6h popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span></div></div>
+                <p class="text-center"><strong>Video 2</strong> - In the second video, solar panels are going on the roof at AESSEAL Global HQ. This is part of AES Engineering’s £29 million by 2029 planet friendly investment pledge.</p>
+              </div>
+
+              <div class="col-lg-4 col-lg-6 col-12 margin-bottom" id="diary-three">
+                <script src="https://fast.wistia.com/embed/medias/oxids1891x.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><span class="wistia_embed wistia_async_oxids1891x popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span></div></div>
+                <p class="text-center"><strong>Video 3</strong> - MD Chris Rea explains how AESSEAL is offsetting emissions, and investing in our large global branches as part of our £29 million by 2029 pledge.</p>
+              </div>
+
+              <div class="col-lg-4 col-lg-6 col-12 margin-bottom" id="diary-four">
+                <script src="https://fast.wistia.com/embed/medias/tmx2072lfz.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><span class="wistia_embed wistia_async_tmx2072lfz popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span></div></div>
+                <p class="text-center"><strong>Video</strong> 4 - Video diary four looks at what businesses can do to help by considering their supply and value chains and the all-important Scope 3 emissions.</p>
+              </div>
+
+              <div class="col-lg-4 col-lg-6 col-12 margin-bottom" id="diary-five">
+                <script src="https://fast.wistia.com/embed/medias/fz0oik1czs.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><span class="wistia_embed wistia_async_fz0oik1czs popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span></div></div>
+                <p class="text-center"><strong>Video 5</strong> - MD Chris Rea looks at the challenge of persuading suppliers to cut their Scope 1 and Scope 2 emissions.</p>
+              </div>
+
+              <div class="col-lg-4 col-lg-6 col-12 margin-bottom" id="diary-six">
+                <script src="https://fast.wistia.com/embed/medias/6yj1tf9xml.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><span class="wistia_embed wistia_async_6yj1tf9xml popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span></div></div>
+                <p class="text-center"><strong>Video 6</strong> - MD Chris Rea outlines how Scope 1 and Scope 2 emissions in the global group will be controlled and how much it will cost. He also indicates how the remaining investment will be committed to other environmentally friendly action.</p>
+              </div>
+
+              <div class="col-lg-4 col-lg-6 col-12 margin-bottom" id="diary-seven">
+                <script src="https://fast.wistia.com/embed/medias/bnhmtyyfy9.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><span class="wistia_embed wistia_async_bnhmtyyfy9 popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span></div></div>
+                <p class="text-center"><strong>Video 7</strong> - In this video MD Chris Rea reveals that almost £3 million has already been committed and undertakes to keep providing updates on the business cases and the environmental outcomes on the Betterworld.Solutions website.</p>
+              </div>
+
+              <div class="col-lg-4 col-lg-6 col-12 margin-bottom" id="diary-eight">
+                <script src="https://fast.wistia.com/embed/medias/iupevwqrhq.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><span class="wistia_embed wistia_async_iupevwqrhq popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span></div></div>
+                <p class="text-center"><strong>Video 8</strong> - In his latest video diary MD Chris Rea talks about how we calculate our scope 1, 2 and 3 emissions and scope 3 avoidance.</p>
+              </div>
+
+              <div class="col-lg-4 col-lg-6 col-12 margin-bottom" id="diary-nine">
+                <script src="https://fast.wistia.com/embed/medias/qv7oc2nb6c.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><span class="wistia_embed wistia_async_qv7oc2nb6c popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span></div></div>
+                <p class="text-center"><strong>Video 9</strong> - In his latest video diary MD Chris Rea reports on  progress on the 29by29 pledge, including the more than £7 million of purchase orders made by mid-January.</p>
+              </div>
+
+              <div class="col-lg-4 col-lg-6 col-12 margin-bottom recent-vid" id="diary-ten">
+                <script src="https://fast.wistia.com/embed/medias/4hr8ekqi5p.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><span class="wistia_embed wistia_async_4hr8ekqi5p popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span></div></div>
+                <p class="text-center"><strong>Video 10</strong> - Chris Rea’s latest video diary includes updates from India, the United States, and details progress on the almost £10 million committed to date on environmental measures</p>
+              </div>
+
+              <div class="col-lg-4 col-lg-6 col-12 margin-bottom" id="diary-eleven">
+                <script src="https://fast.wistia.com/embed/medias/xa9s3kj3eu.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><span class="wistia_embed wistia_async_xa9s3kj3eu popover=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span></div></div>              
+                <p class="text-center"><strong>Video 11</strong> - In his latest video diary AES Engineering Managing Director Chris Rea reports on progress on the 29by29 pledge, including almost £16 million of purchase orders made to date.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div class="row">
+        <div class="col-lg-10 col-xl-8 offset-xl-2 offet-lg-1 iceberg-footer-banner mt-5">
+          <div class="text-bg-primay mt-5 ">
+            <div class="row">
+              <div class="col-xl-8 col-lg-12">
+                <h4 class="text-white"><strong>Careful selection of configuration &amp; product types can save your organisation and nature's valuable resources.</strong> </h4>
+              </div>
+              <div class="col-xl-4 col-lg-12"><img class="img-fluid " loading="lazy" src="https://betterworld.solutions/hubfs/raw_assets/public/bw-theme/images/betterworld-solutions-logo-1.png"></div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <p class="text-center off-text-white">Did you know that you could see a return on investment whilst helping to save the environment?</p>
+                <p class="text-center"><a href="https://betterworld.solutions" title="create an investment policy to prevent global warming" class="btn btn-default" rel="nofollow">Take a Journey to 'Net Zero'</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-  </div>
+    <a id="top" class="text-white prev-icon no-dash" href="#news">
+      <div class="prev-point" data-toggle="tooltip" data-placement="top" title="Scroll to latest news">
+        <i class="fas fa-chevron-up fa-2x"></i>
+      </div>
+    </a>
+
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/2248916.js"></script>
+
+  </main>
+  <footer class="container-fluid fullscreen">
+    <div class="row darkgrey-background no-padding">
+      <div class="col-lg-12 fullscreen">
+        <div class="row darkgrey-background no-padding">
+          <div class="footer">
+            <div class="conatiner-fluid">
+              <div class="row row-eq-height flex-wrap pt-7 mt-7">
+                <div class="col-lg-3 offet-lg-0 col-12">
+                  <p>
+                    <a class="text-white" href="https://www.aesseal.com/en/resources/industry-guides/modern-slavery-policy" rel="nofollow">Modern Slavery Policy</a><br />
+                    <a class="text-white" href="https://www.aesseal.com/en/privacy-policy" rel="nofollow">Privacy Policy</a><br />
+                    <a class="text-white" href="https://www.aesseal.com/en/terms-and-conditions" rel="nofollow">Legal Documents, Terms and Conditions</a><br />
+                    <a class="text-white" href="https://www.aesseal.com/en/about-us" rel="nofollow">About Us</a><br />
+                    <a class="text-white" href="https://www.aesseal.com/en/sitemap" rel="nofollow">Sitemap</a>
+                  </p>
+                </div>
+                <div class="col-lg-5 col-12 flex-item-bottom footer-logos no-padding">
+                  <div class="row row-no-gutters">
+                    <div class="col-lg-4 col-lg-6 col-8">
+                      <a href="http://www.investorsinpeople.co.uk/" rel="nofollow">
+                        <picture>
+                          <img alt="Investors in People" data-toggle="tooltip" data-placement="top" title="Investors in People" class="footerlogos lazyaspectratio img-fluid" loading="lazy" src="images/Investors-In-People-White.svg">
+                        </picture>
+                      </a>
+                    </div>
+                    <div class="col-lg-3 offet-lg-0 col-4">
+                      <a href="https://www.aesseal.com/en/about-us/awards" rel="nofollow">
+                        <picture>
+                          <img class="footerlogos lazyaspectratio img-fluid " loading="lazy" data-toggle="tooltip" data-placement="top" title="Queen’s Award for Enterprise" alt="Queen’s Award for Enterprise" src="images/QA-Innovation-2021.svg">
+                        </picture>
+                      </a>
+                    </div>
+                    <div class="col-lg-5  col-12 padding-bottom-2em padding-right">
+                      <a href="https://www.aesseal.com/en/article/aesseal-plc-goes-beyond-net-zero" loading="lazy" rel="nofollow">
+                        <picture><img class="img-75 center-block footerlogos img-fluid " loading="lazy" alt="AESSEAL plc goes beyond Net Zero" data-toggle="tooltip" data-placement="top" title="AESSEAL plc goes beyond Net Zero" src="images/net-zero-logo-white.svg">
+                        </picture>
+                      </a></div>
+                  </div>
+                </div>
+                <div class="col-lg-3 offet-lg-1 col-lg-4 col-12 text-center footer-social-icons fade-50 no-padding">
+                  <a class="no-dash text-white padding-top padding-bottom padding-right-05em" href="https://twitter.com/AESSEALplc" target="_self" data-toggle="tooltip" data-placement="top" title="Twitter"> <i class="fab fa-twitter hover-grow"></i></a>
+                  <a class="no-dash text-white padding-top padding-bottom padding-right-05em" href="https://www.youtube.com/channel/UCgMnROdfT9mJcgCbIkZWjQA/videos" target="_self" data-toggle="tooltip" data-placement="top" title="YouTube"><i
+                      class="fab fa-youtube hover-grow"></i></a>
+                  <a class="no-dash text-white padding-right-05em padding-top padding-bottom" href="http://www.linkedin.com/company/aesseal" target="_self" data-toggle="tooltip" data-placement="top" title="Linkedin"> <i
+                      class="fab fa-linkedin-in hover-grow"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid midgrey-background">
+          <div class="row">
+            <div class="col-xl-9 col-lg-8 d-none">
+              &nbsp;
+            </div>
+            <div class="col-xl-3 col-lg-4 height-0 d-none">
+              <img class="footer-curve" src="images/slim-lower-wave-grey.svg" alt="curve-down">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 text-center">
+              <p class="standard-text small">AESSEAL<sup>®</sup> is a trademark of AESSEAL plc. Registered in the UK No. 2101607 | AESSEAL Global Technology Centre, Mill Close, Rotherham, South Yorkshire S60 1BZ</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </div>
-
-<body>
-  <div class="conatiner-fluid">
-    <div class="row">
-      <div class="col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
-        <p class="lead">Our ‘£29 million by 2029’ pledge recognises that businesses will have a potentially huge influence on the success of efforts to limit global warming.</p>
-        <p>By committing to take the global company beyond Net Zero globally (we have already gone beyond Net Zero in the UK business) and explaining how we are going to do it, we believe we will provide a road map for other companies and organisations who share our concern about ethical, balanced and sustainable development.</p>
-      </div>
-
-      <div class="col-sm-10 col-lg-8 col-lg-offset-2 col-sm-offset-1">
-        <h2 class="text-center" id="news">Latest News</h2>
-        <div class="carousel slide media-carousel" id="latestNews" data-interval="false">
-          <div class="carousel-inner horizontal">
-
-            <div class="item active">
-              <div class="col-md-4 col-sm-6 col-xs-12 news no-padding">
-                <div class="news-panel">
-                  <div class="news-heading">
-                    <img class="img-adaptive center-block" src="https://static.aesseal.com/content-thumb/news/AESSEAL_Chris_Rea_001-sq.jpg" alt="Chris Rea in Factory for the Future" rel="nofollow">
-                  </div>
-                  <div class="news-body">
-                    <h4>AES in The Times</h4>
-                    <p>AES Engineering Managing Director Chris Rea writes in The Times about the group’s strategy to invest in its staff and in technology in order to future proof jobs and keep ahead of the competition.</p>
-                  </div>
-                  <div class="news-footer">
-                    <a data-toggle="tooltip" class="btn btn-primary" data-placement="bottom" title="" href="https://www.aesseal.com/en/article/in-the-aes-times/" data-original-title="Read the article on aesseal.com" rel="nofollow">Read the Article</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="col-md-4 col-sm-6 col-xs-12 news no-padding">
-                <div class="news-panel">
-                  <div class="news-heading">
-                    <img class="img-adaptive center-block" src="https://static.aesseal.com/content-thumb/news/TORISHIMA_ECOGUARD_6073.jpg" alt="EcoGuard Product">
-                  </div>
-                  <div class="news-body">
-                    <h4>New System Could Eliminate Flaring and Venting from Oil and Gas Fields</h4>
-                    <p>A ground-breaking technology aimed at addressing flaring and venting in oil and gas fields has been launched by UK-based AESSEAL, in partnership with Torishima (Glasgow, UK)</p>
-                  </div>
-                  <div class="news-footer">
-                    <a data-toggle="tooltip" class="btn btn-primary" data-placement="bottom" title="Read the article on aesseal.com" href="https://www.aesseal.com/en/article/new-system-could-eliminate-flaring-and-venting-oil-and-gas-fields/" rel="nofollow">Watch the Video</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="col-md-4 col-sm-6 col-xs-12 news no-padding">
-                <div class="news-panel">
-                  <div class="news-heading">
-                    <img class="img-adaptive center-block" src="https://static.aesseal.com/content-thumb/news/AU-BREEAM-certification-420.jpg" alt="HVAC Stsyem and workers" rel="nofollow">
-                  </div>
-                  <div class="news-body">
-                    <h4>AESSEAL first in Australia with BREEAM certification</h4>
-                    <p>AESSEAL Australia has announced that its headquarters building in Brisbane has been certified under the BREEAM sustainability scheme - the first building in Australia to receive such a certification.</p>
-                  </div>
-                  <div class="news-footer">
-                    <a data-toggle="tooltip" class="btn btn-primary" data-placement="bottom" title="" href="https://www.aesseal.com/en/article/first-australia-breeam-certification/" data-original-title="Read the article on aesseal.com" rel="nofollow">Read the Article</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="col-md-4 col-sm-6 col-xs-12 news no-padding">
-                <div class="news-panel">
-                  <div class="news-heading">
-                    <img class="img-adaptive center-block" src="https://static.aesseal.com/content-thumb/news/Three-years-beyond-Net-Zero-sq.jpg" alt="Sun breaking through trees">
-                  </div>
-                  <div class="news-body">
-                    <h4>Three years beyond Net Zero
-                    </h4>
-                    <p>AES Engineering Ltd group went beyond Net Zero in 2023 for the third year running with a positive environmental impact over this period equivalent to a forest of 15 million trees</p>
-                  </div>
-                  <div class="news-footer">
-                    <a data-toggle="tooltip" class="btn btn-primary" data-placement="bottom" title="" href="https://www.aesseal.com/en/article/three-years-beyond-net-zero/" rel="nofollow" data-original-title="Read the article on aesseal.com">Read the Article</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="col-md-4 col-sm-6 col-xs-12 news no-padding">
-                <div class="news-panel">
-                  <div class="news-heading">
-                    <img class="img-adaptive center-block" src="https://static.aesseal.com/content-thumb/news/sypd_2024_sustainable_development-sq.jpg" alt="Queens award flag">
-                  </div>
-                  <div class="news-body">
-                    <h4>Sustainable Development of the Year</h4>
-                    <p>The AESSEAL Factory for the Future has been voted Sustainable Development of the Year at the South Yorkshire Property Awards.</p>
-                  </div>
-                  <div class="news-footer">
-                    <a data-toggle="tooltip" class="btn btn-primary" data-placement="bottom" title="" href="https://www.aesseal.com/en/article/sustainable-development-year/" rel="nofollow" data-original-title="Read the article on aesseal.com">Read the Article</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="col-md-4 col-sm-6 col-xs-12 news no-padding">
-                <div class="news-panel">
-                  <div class="news-heading">
-                    <img class="img-adaptive center-block" src="images/Our-video-journey-sq.jpg" alt="Chris Video Diary thumbnail">
-                  </div>
-                  <div class="news-body">
-                    <h4>Chris Rea Video Diary 11</h4>
-                    <p>In his latest video diary AES Engineering Managing Director Chris Rea reports on progress on the 29by29 pledge, including almost £16 million of purchase orders made to date.</p>
-                  </div>
-                  <div class="news-footer">
-                    <a data-toggle="tab" aria-expanded="true" class="btn btn-primary latest-vid" title="Watch the latest video in the boxset" data-target="#box-set" data-original-title="Watch the latest video in the boxset">Watch the Video</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="col-md-4 col-sm-6 col-xs-12 news no-padding">
-                <div class="news-panel">
-                  <div class="news-heading">
-                    <img class="img-adaptive center-block" src="https://static.aesseal.com/content-thumb/news/Methane-Flare-2.jpg" alt="Methane flaring on rig" rel="nofollow">
-                  </div>
-                  <div class="news-body">
-                    <h4>Stopping methane flaring and venting</h4>
-                    <p>AESSEAL, has invented new technology that seeks to eliminate or reduce both intermittent and continuous emissions and could be retrofitted to oil and gas facilities across the world.</p>
-                  </div>
-                  <div class="news-footer">
-                    <a data-toggle="tooltip" class="btn btn-primary" data-placement="bottom" title="" href="https://betterworld.solutions/examples/stop-methane-flaring-yes-we-can" data-original-title="Read the article on betterworld.solutions" rel="nofollow">Read the Article</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <div class="carousel-controls">
-          <a class="left prev-arrow-space carousel-control no-dash" href="#latestNews" role="button" data-slide="prev">
-            <i class="fas fas fa-angle-left fa-3x carousel-btn-left"></i>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right next-arrow-space carousel-control no-dash" href="#latestNews" role="button" data-slide="next">
-            <i class="fas fa-angle-right fa-3x carousel-btn-right"></i>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="container-fluid blue-background margin-top">
-      <div class="row row-deep">
-        <div class="col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
-          <div class="col-xs-12 col-sm-4 col-sm-push-8 col-md-3 col-md-push-9 image-highlight no-padding">
-            <a href="https://aesdigitalbooks.s3.eu-west-1.amazonaws.com/29by29-03/index.html" target="_blank" title="29by29 Update" rel="nofollow">
-              <img class="img-responsive lazyload" loading="lazy" src="https://static.aesseal.com/content-image/brochure/29-digi-cover.jpg" alt="29 by 29 Update brochure cover" />
-            </a>
-          </div>
-          <div class="col-xs-12 col-sm-8 col-md-9 col-sm-pull-4 col-md-pull-3">
-            <h3>29 by 29 Investment Summary</h3>
-            <p class="white-text">The AES Engineering Ltd. Group has committed to invest £29 million on environmental projects between January 1, 2021 and April 1, 2029. Part of the commitment was an undertaking to report on progress, so we are doing what we said we would.</p>
-            <p><a href="https://aesdigitalbooks.s3.eu-west-1.amazonaws.com/29by29-03/index.html" class="btn-midgrey btn margin-top" rel="nofollow">Open the Brochure</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container-fluid margin-top">
-      <div class="container" id="boxset">
-        <h2>Chris Rea Video Diary Box Set</h3>
-        <p class="lead">The AES Engineering Group has committed to invest £29 million on environmental projects between January 1st 2021 and April 1st 2029. The following videos are part of the commitment to report on the progress.</p>
-        <div class="row">
-          <div class="row row-eq-height flex-wrap">
-
-            <div class="col-md-4 col-sm-6 col-xs-12 margin-bottom" id="diary-one">
-              <script src="https://fast.wistia.com/embed/medias/rvo9ngid6n.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><span class="wistia_embed wistia_async_rvo9ngid6n popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span></div></div>
-              <p class="text-center"><strong>Video 1</strong> - In this first video find out how industry can help tackle climate change, and how AESSEAL are committing to spend £29,000,000 on environmental projects by 2029.</p>
-            </div>
-
-            <div class="col-md-4 col-sm-6 col-xs-12 margin-bottom" id="diary-two">
-              <script src="https://fast.wistia.com/embed/medias/3dj8nq6p6h.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><span class="wistia_embed wistia_async_3dj8nq6p6h popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span></div></div>
-              <p class="text-center"><strong>Video 2</strong> - In the second video, solar panels are going on the roof at AESSEAL Global HQ. This is part of AES Engineering’s £29 million by 2029 planet friendly investment pledge.</p>
-            </div>
-
-            <div class="col-md-4 col-sm-6 col-xs-12 margin-bottom" id="diary-three">
-              <script src="https://fast.wistia.com/embed/medias/oxids1891x.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><span class="wistia_embed wistia_async_oxids1891x popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span></div></div>
-              <p class="text-center"><strong>Video 3</strong> - MD Chris Rea explains how AESSEAL is offsetting emissions, and investing in our large global branches as part of our £29 million by 2029 pledge.</p>
-            </div>
-
-            <div class="col-md-4 col-sm-6 col-xs-12 margin-bottom" id="diary-four">
-              <script src="https://fast.wistia.com/embed/medias/tmx2072lfz.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><span class="wistia_embed wistia_async_tmx2072lfz popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span></div></div>
-              <p class="text-center"><strong>Video</strong> 4 - Video diary four looks at what businesses can do to help by considering their supply and value chains and the all-important Scope 3 emissions.</p>
-            </div>
-
-            <div class="col-md-4 col-sm-6 col-xs-12 margin-bottom" id="diary-five">
-              <script src="https://fast.wistia.com/embed/medias/fz0oik1czs.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><span class="wistia_embed wistia_async_fz0oik1czs popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span></div></div>
-              <p class="text-center"><strong>Video 5</strong> - MD Chris Rea looks at the challenge of persuading suppliers to cut their Scope 1 and Scope 2 emissions.</p>
-            </div>
-
-            <div class="col-md-4 col-sm-6 col-xs-12 margin-bottom" id="diary-six">
-              <script src="https://fast.wistia.com/embed/medias/6yj1tf9xml.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><span class="wistia_embed wistia_async_6yj1tf9xml popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span></div></div>
-              <p class="text-center"><strong>Video 6</strong> - MD Chris Rea outlines how Scope 1 and Scope 2 emissions in the global group will be controlled and how much it will cost. He also indicates how the remaining investment will be committed to other environmentally friendly action.</p>
-            </div>
-
-            <div class="col-md-4 col-sm-6 col-xs-12 margin-bottom" id="diary-seven">
-              <script src="https://fast.wistia.com/embed/medias/bnhmtyyfy9.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><span class="wistia_embed wistia_async_bnhmtyyfy9 popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span></div></div>
-              <p class="text-center"><strong>Video 7</strong> - In this video MD Chris Rea reveals that almost £3 million has already been committed and undertakes to keep providing updates on the business cases and the environmental outcomes on the Betterworld.Solutions website.</p>
-            </div>
-
-            <div class="col-md-4 col-sm-6 col-xs-12 margin-bottom" id="diary-eight">
-              <script src="https://fast.wistia.com/embed/medias/iupevwqrhq.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><span class="wistia_embed wistia_async_iupevwqrhq popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span></div></div>
-              <p class="text-center"><strong>Video 8</strong> - In his latest video diary MD Chris Rea talks about how we calculate our scope 1, 2 and 3 emissions and scope 3 avoidance.</p>
-            </div>
-
-            <div class="col-md-4 col-sm-6 col-xs-12 margin-bottom" id="diary-nine">
-              <script src="https://fast.wistia.com/embed/medias/qv7oc2nb6c.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><span class="wistia_embed wistia_async_qv7oc2nb6c popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span></div></div>
-              <p class="text-center"><strong>Video 9</strong> - In his latest video diary MD Chris Rea reports on  progress on the 29by29 pledge, including the more than £7 million of purchase orders made by mid-January.</p>
-            </div>
-
-            <div class="col-md-4 col-sm-6 col-xs-12 margin-bottom recent-vid" id="diary-ten">
-              <script src="https://fast.wistia.com/embed/medias/4hr8ekqi5p.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><span class="wistia_embed wistia_async_4hr8ekqi5p popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span></div></div>
-              <p class="text-center"><strong>Video 10</strong> - Chris Rea’s latest video diary includes updates from India, the United States, and details progress on the almost £10 million committed to date on environmental measures</p>
-            </div>
-
-            <div class="col-md-4 col-sm-6 col-xs-12 margin-bottom" id="diary-eleven">
-              <script src="https://fast.wistia.com/embed/medias/xa9s3kj3eu.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><span class="wistia_embed wistia_async_xa9s3kj3eu popover=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span></div></div>              
-              <p class="text-center"><strong>Video 11</strong> - In his latest video diary AES Engineering Managing Director Chris Rea reports on progress on the 29by29 pledge, including almost £16 million of purchase orders made to date.</p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="clearfix"></div>
-
-    <div class="row">
-      <div class="col-sm-10 col-lg-8 col-lg-offset-2 col-sm-offset-1 iceberg-footer-banner margin-top">
-        <div class="blue-background margin-top ">
-          <div class="row">
-            <div class="col-lg-8 col-md-12">
-              <h4 class="white-text"><strong>Careful selection of configuration &amp; product types can save your organisation and nature's valuable resources.</strong> </h4>
-            </div>
-            <div class="col-lg-4 col-md-12"><img class="img-responsive lazyload" loading="lazy" src="https://betterworld.solutions/hubfs/raw_assets/public/bw-theme/images/betterworld-solutions-logo-1.png"></div>
-          </div>
-          <div class="row">
-            <div class="col-sm-12">
-              <p class="text-center off-white-text">Did you know that you could see a return on investment whilst helping to save the environment?</p>
-              <p class="text-center"><a href="https://betterworld.solutions" title="create an investment policy to prevent global warming" class="btn btn-default" rel="nofollow">Take a Journey to 'Net Zero'</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <a id="top" class="white-text prev-icon no-dash" href="#news">
-    <div class="prev-point" data-toggle="tooltip" data-placement="top" title="Scroll to latest news">
-      <i class="fas fa-chevron-up fa-2x"></i>
-    </div>
-  </a>
-
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/2248916.js"></script>
-
-</body>
-<footer class="container-fluid fullscreen">
-  <div class="row darkgrey-background no-padding">
-    <div class="col-sm-12 fullscreen">
-      <div class="row darkgrey-background no-padding">
-        <div class="footer">
-          <div class="conatiner-fluid">
-            <div class="row row-eq-height flex-wrap padding-top-2em margin-top-2em">
-              <div class="col-sm-3 col-sm-offset-0 col-xs-12">
-                <p>
-                  <a class="white-text" href="https://www.aesseal.com/en/resources/industry-guides/modern-slavery-policy" rel="nofollow">Modern Slavery Policy</a><br />
-                  <a class="white-text" href="https://www.aesseal.com/en/privacy-policy" rel="nofollow">Privacy Policy</a><br />
-                  <a class="white-text" href="https://www.aesseal.com/en/terms-and-conditions" rel="nofollow">Legal Documents, Terms and Conditions</a><br />
-                  <a class="white-text" href="https://www.aesseal.com/en/about-us" rel="nofollow">About Us</a><br />
-                  <a class="white-text" href="https://www.aesseal.com/en/sitemap" rel="nofollow">Sitemap</a>
-                </p>
-              </div>
-              <div class="col-sm-5 col-xs-12 flex-item-bottom footer-logos no-padding">
-                <div class="row row-no-gutters">
-                  <div class="col-md-4 col-sm-6 col-xs-8">
-                    <a href="http://www.investorsinpeople.co.uk/" rel="nofollow">
-                      <picture>
-                        <img alt="Investors in People" data-toggle="tooltip" data-placement="top" title="Investors in People" class="footerlogos lazyaspectratio img-responsive lazyload" loading="lazy" src="images/Investors-In-People-White.svg">
-                      </picture>
-                    </a>
-                  </div>
-                  <div class="col-sm-3 col-sm-offset-0 col-xs-4">
-                    <a href="https://www.aesseal.com/en/about-us/awards" rel="nofollow">
-                      <picture>
-                        <img class="footerlogos lazyaspectratio img-responsive lazyload" loading="lazy" data-toggle="tooltip" data-placement="top" title="Queen’s Award for Enterprise" alt="Queen’s Award for Enterprise" src="images/QA-Innovation-2021.svg">
-                      </picture>
-                    </a>
-                  </div>
-                  <div class="col-sm-5  col-xs-12 padding-bottom-2em padding-right">
-                    <a href="https://www.aesseal.com/en/article/aesseal-plc-goes-beyond-net-zero" loading="lazy" rel="nofollow">
-                      <picture><img class="img-75 center-block footerlogos img-responsive lazyload" loading="lazy" alt="AESSEAL plc goes beyond Net Zero" data-toggle="tooltip" data-placement="top" title="AESSEAL plc goes beyond Net Zero" src="images/net-zero-logo-white.svg">
-                      </picture>
-                    </a></div>
-                </div>
-              </div>
-              <div class="col-md-3 col-md-offset-1 col-sm-4 col-xs-12 text-center footer-social-icons fade-50 no-padding">
-                <a class="no-dash white-text padding-top padding-bottom padding-right-05em" href="https://twitter.com/AESSEALplc" target="_self" data-toggle="tooltip" data-placement="top" title="Twitter"> <i class="fab fa-twitter hover-grow"></i></a>
-                <a class="no-dash white-text padding-top padding-bottom padding-right-05em" href="https://www.youtube.com/channel/UCgMnROdfT9mJcgCbIkZWjQA/videos" target="_self" data-toggle="tooltip" data-placement="top" title="YouTube"><i
-                    class="fab fa-youtube hover-grow"></i></a>
-                <a class="no-dash white-text padding-right-05em padding-top padding-bottom" href="http://www.linkedin.com/company/aesseal" target="_self" data-toggle="tooltip" data-placement="top" title="Linkedin"> <i
-                    class="fab fa-linkedin-in hover-grow"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container-fluid midgrey-background">
-        <div class="row">
-          <div class="col-md-9 col-sm-8 hidden-xs">
-            &nbsp;
-          </div>
-          <div class="col-md-3 col-sm-4 height-0 hidden-xs">
-            <img class="footer-curve" src="images/slim-lower-wave-grey.svg" alt="curve-down">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 text-center">
-            <p class="standard-text small">AESSEAL<sup>®</sup> is a trademark of AESSEAL plc. Registered in the UK No. 2101607 | AESSEAL Global Technology Centre, Mill Close, Rotherham, South Yorkshire S60 1BZ</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
 <script type="text/javascript" src="js/progress-scroll.js"></script>
-
-
 </html>

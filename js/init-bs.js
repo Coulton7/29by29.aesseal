@@ -1,61 +1,23 @@
-(function($){
-
-  $(document).ready(function() {
-    $('[data-toggle="tooltip"]').tooltip({
-      trigger: 'hover'
-    });
-    $('[data-toggle="tooltip"]').on('click', function() {
-      $(this).tooltip('hide');
-    });
-
-  });
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+var nav = document.querySelector('.main-menu');
+var nationalFlag = document.querySelector(".navbar-flag")
 
 document.addEventListener("DOMContentLoaded", function() {
-    var lazyloadImages;
-
-    if ("IntersectionObserver" in window) {
-      lazyloadImages = document.querySelectorAll(".lazy");
-      var imageObserver = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            var image = entry.target;
-            image.classList.remove("lazy");
-            imageObserver.unobserve(image);
-          }
-        });
-      });
-
-      lazyloadImages.forEach(function(image) {
-        imageObserver.observe(image);
-      });
-    } else {
-      var lazyloadThrottleTimeout;
-      lazyloadImages = document.querySelectorAll(".lazy");
-
-      function lazyload() {
-        if (lazyloadThrottleTimeout) {
-          clearTimeout(lazyloadThrottleTimeout);
-        }
-
-        lazyloadThrottleTimeout = setTimeout(function() {
-          var scrollTop = window.pageYOffset;
-          lazyloadImages.forEach(function(img) {
-            if (img.offsetTop < (window.innerHeight + scrollTop)) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-            }
-          });
-          if (lazyloadImages.length == 0) {
-            document.removeEventListener("scroll", lazyload);
-            window.removeEventListener("resize", lazyload);
-            window.removeEventListener("orientationChange", lazyload);
-          }
-        }, 20);
-      }
-
-      document.addEventListener("scroll", lazyload);
-      window.addEventListener("resize", lazyload);
-      window.addEventListener("orientationChange", lazyload);
+    var resourceSearchTriegger = document.querySelector("#global-overlay-search");
+    if(resourceSearchTriegger){
+        resourceSearchTriegger.addEventListener('click', function(){
+            var resouceSearch = document.querySelector('#resourceSearch')
+            bootstrap.Tab.getOrCreateInstance(resouceSearch).show()
+        })
     }
-  });
+
+    if(!nav) {
+        document.querySelector('.navbar-toggler').style.display = "none";
+        document.querySelector('.collapse').style.display="flex";
+    }
+
+    if(nationalFlag) {
+        document.querySelector('.navbar-toggler').classList.add("flag-space");
+    }
 });
