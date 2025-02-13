@@ -13312,7 +13312,7 @@ a.disabled {
 
 .wavelogo img {
   position: relative;
-  top: 0.5em;
+  top: -0.5em;
 }
 
 .waveupper {
