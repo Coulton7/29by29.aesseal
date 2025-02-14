@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
   function getUrlVars(){
     var option = [], tag;
     var tags = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    console.log(tags);
     for(var i = 0; i < tags.length; i++)
     {
       tag = tags[i].split('=');
@@ -16,8 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   var vidString = getUrlVars()["v"];
   if(vidString == 'rv') {
-    document.querySelector(".tab-pane").classList.remove("active");
-    document.querySelector("#box-set").classList.add("active");
+    document.querySelector("#boxset").classList.add("active");
     recentVid.scrollIntoView();
   }
 });
