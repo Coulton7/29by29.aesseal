@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded", function() {
   if(vidString == 'rv') {
     document.querySelector("#boxset").classList.add("active");
     window.scrollTo({
-      top: offsetPostion,
+      top: recentVid.offsetTop,
+      left: 0,
       behavior: "smooth"
       
     });
