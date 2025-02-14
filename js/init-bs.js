@@ -12,11 +12,6 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     }
 
-    if(!nav) {
-        document.querySelector('.navbar-toggler').style.display = "none";
-        document.querySelector('.collapse').style.display="flex";
-    }
-
     if(nationalFlag) {
         document.querySelector('.navbar-toggler').classList.add("flag-space");
     }
