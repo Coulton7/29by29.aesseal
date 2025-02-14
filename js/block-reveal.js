@@ -1,26 +1,23 @@
-(function($) {
-  $(document).ready(function() {
+document.addEventListener("DOMContentLoaded", function() {
 
-    function getUrlVars()
+  var recentVid = document.querySelector('.recent-vid');
+
+  function getUrlVars(){
+    var option = [], tag;
+    var tags = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < tags.length; i++)
     {
-      var option = [], tag;
-      var tags = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-      for(var i = 0; i < tags.length; i++)
-      {
-        tag = tags[i].split('=');
-        option.push(tag[0]);
-        option[tag[0]] = tag[1];
-      }
-      return option;
+      tag = tags[i].split('=');
+      option.push(tag[0]);
+      option[tag[0]] = tag[1];
     }
+    return option;
+  }
 
-    var vidString = getUrlVars()["v"];
-    if(vidString == 'rv') {
-      $(".tab-pane").removeClass("active");
-      $("#box-set").addClass("active");
-      $('html:not(:animated), body:not(:animated)').animate({
-        scrollTop: $('.recent-vid').offset().top - 100
-      }, 1000);
-    }
-  });
-})(jQuery);
+  var vidString = getUrlVars()["v"];
+  if(vidString == 'rv') {
+    document.querySelector(".tab-pane").classList.remove("active");
+    document.querySelector("#box-set").classList.add("active");
+    recentVid.scrollIntoView();
+  }
+});
