@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 
   var recentVid = document.querySelector('.recent-vid');
-  var offset = 100;
+  var offset = 250;
   var recentVidPosition = recentVid.getBoundingClientRect().top;
   var offsetPostion = recentVidPosition + window.scrollY - offset;
 
