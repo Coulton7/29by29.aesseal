@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
 
   var recentVid = document.querySelector('.recent-vid');
+  var offset = 45;
+  var recentVidPosition = recentVid.getBoundingClientRect().top;
+  var offsetPostion = recentVidPosition + window.scrollY - offset;
 
   function getUrlVars(){
     var option = [], tag;
@@ -18,6 +21,10 @@ document.addEventListener("DOMContentLoaded", function() {
   var vidString = getUrlVars()["v"];
   if(vidString == 'rv') {
     document.querySelector("#boxset").classList.add("active");
-    recentVid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    window.scrollTo({
+      top: offsetPostion,
+      behavior: "smooth"
+      
+    });
   }
 });
