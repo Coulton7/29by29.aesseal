@@ -18,6 +18,6 @@ document.addEventListener("DOMContentLoaded", function() {
   var vidString = getUrlVars()["v"];
   if(vidString == 'rv') {
     document.querySelector("#boxset").classList.add("active");
-    recentVid.scrollIntoView();
+    recentVid.scrollTop = 100;
   }
 });
